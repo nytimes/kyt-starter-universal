@@ -1,0 +1,32 @@
+{
+  "name": "wf-kyt-starter-universal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nytm/wf-kyt-starter-universal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nytm/wf-kyt-starter-universal/issues"
+  },
+  "homepage": "https://github.com/nytm/wf-kyt-starter-universal#readme",
+  "dependencies": {
+    "clean-css": "^3.4.19",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "jss": "^5.2.0",
+    "jss-camel-case": "^2.0.0",
+    "jss-vendor-prefixer": "^3.0.0",
+    "path": "^0.12.7",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-jss": "^3.0.0",
+    "react-router": "^2.6.1"
+  }
+}
