@@ -1,7 +1,5 @@
 
-import 'source-map-support/register';
 import express from 'express';
-import fs from 'fs';
 import compression from 'compression';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -10,17 +8,15 @@ import createMemoryHistory from 'react-router/lib/createMemoryHistory';
 import match from 'react-router/lib/match';
 import template from './template';
 import routes from '../routes';
-import cleancss from 'clean-css';
-import jss from 'jss';
-const clientAssets = require(process.env.ASSETS_PATH);
 
+const clientAssets = require(process.env.ASSETS_PATH);
 const app = express();
 app.disable('x-powered-by');
 app.use(compression());
 
 app.use(process.env.PUBLIC_PATH, express.static(process.env.CLIENT_BUILD_PATH));
 
-app.get('*', (request, response, next) => {
+app.get('*', (request, response) => {
   const history = createMemoryHistory(request.originalUrl);
 
   match({ routes, history }, (error, redirectLocation, renderProps) => {
@@ -31,8 +27,8 @@ app.get('*', (request, response, next) => {
     } else if (renderProps) {
       response.status(200).send(template({
         root: renderToString(<RouterContext {...renderProps} />),
-        css: new cleancss().minify(jss.sheets.toString()).styles,
-        jsBundle: clientAssets.main.js
+        jsBundle: clientAssets.main.js,
+        cssBundle: clientAssets.main.css,
       }));
     } else {
       response.status(404).send('Not found');

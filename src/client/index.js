@@ -9,7 +9,7 @@ const root = document.querySelector('#root');
 
 const mount = () => {
   render(<Router history={browserHistory} routes={routes} />, root);
-}
+};
 
 if (process.env.NODE_ENV === 'development' && module.hot) {
   // Rerender after any changes to the following.
