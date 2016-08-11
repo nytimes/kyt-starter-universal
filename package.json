@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nytm/wf-kyt-starter-universal#readme",
   "dependencies": {
+    "ava": "^0.16.0",
     "chai": "^3.5.0",
     "compression": "^1.6.2",
     "enzyme": "^2.4.1",
