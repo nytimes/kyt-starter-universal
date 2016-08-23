@@ -9,12 +9,12 @@ import match from 'react-router/lib/match';
 import template from './template';
 import routes from '../routes';
 
-const clientAssets = require(process.env.ASSETS_PATH);
+const clientAssets = require(process.env.ASSETS_MANIFEST);
 const app = express();
 app.disable('x-powered-by');
 app.use(compression());
 
-app.use(process.env.PUBLIC_PATH, express.static(process.env.CLIENT_BUILD_PATH));
+app.use(express.static(process.env.PUBLIC_DIR));
 
 app.get('*', (request, response) => {
   const history = createMemoryHistory(request.originalUrl);

@@ -17,7 +17,7 @@ export default (vo) => `
   </head>
 
   <body>
-    <div id="root">${vo.root}</div>
+    <div id="root"><div>${vo.root}</div></div>
     <script src="${vo.jsBundle}"></script>
   </body>
 
