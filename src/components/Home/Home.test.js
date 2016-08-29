@@ -7,5 +7,5 @@ import Home from './Home';
 
 ava('Test example', (test) => {
   const wrapper = shallow(<Home />);
-  test.pass(chai.assert.isTrue(wrapper.is('div')));
+  test.pass(chai.assert.isTrue(wrapper.is('section')));
 });

@@ -1,6 +1,7 @@
 
 import express from 'express';
 import compression from 'compression';
+import path from 'path';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import RouterContext from 'react-router/lib/RouterContext';
@@ -14,7 +15,7 @@ const app = express();
 app.disable('x-powered-by');
 app.use(compression());
 
-app.use(express.static(process.env.PUBLIC_DIR));
+app.use(express.static(path.join(__dirname, process.env.PUBLIC_DIR)));
 
 app.get('*', (request, response) => {
   const history = createMemoryHistory(request.originalUrl);
