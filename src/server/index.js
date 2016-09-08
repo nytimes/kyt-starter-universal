@@ -15,7 +15,7 @@ const app = express();
 app.disable('x-powered-by');
 app.use(compression());
 
-app.use(express.static(path.join(__dirname, process.env.PUBLIC_DIR)));
+app.use(express.static(path.join(process.cwd(), process.env.PUBLIC_DIR)));
 
 app.get('*', (request, response) => {
   const history = createMemoryHistory(request.originalUrl);
