@@ -12,11 +12,17 @@ import routes from '../routes';
 
 const clientAssets = require(process.env.ASSETS_MANIFEST);
 const app = express();
+
+// Remove annoying Express header addition.
 app.disable('x-powered-by');
+
+// Compress (gzip) assets in production.
 app.use(compression());
 
+// Setup the public directory so that we can server static assets.
 app.use(express.static(path.join(process.cwd(), process.env.PUBLIC_DIR)));
 
+// Setup server side routing.
 app.get('*', (request, response) => {
   const history = createMemoryHistory(request.originalUrl);
 
@@ -26,6 +32,8 @@ app.get('*', (request, response) => {
     } else if (redirectLocation) {
       response.redirect(302, `${redirectLocation.pathname}${redirectLocation.search}`);
     } else if (renderProps) {
+      // When a React Router route is matched then we render
+      // the components and assets into the template.
       response.status(200).send(template({
         root: renderToString(<RouterContext {...renderProps} />),
         jsBundle: clientAssets.main.js,
