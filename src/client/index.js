@@ -15,10 +15,12 @@ const mount = (RootComponent) => {
   );
 };
 
-module.hot.accept('./Root', () => {
-  // eslint-disable-next-line global-require,import/newline-after-import
-  const RootComponent = require('./Root').default;
-  mount(RootComponent);
-});
+if (module.hot) {
+  module.hot.accept('./Root', () => {
+    // eslint-disable-next-line global-require,import/newline-after-import
+    const RootComponent = require('./Root').default;
+    mount(RootComponent);
+  });
+}
 
 mount(Root);
