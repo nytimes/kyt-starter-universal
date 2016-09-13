@@ -1,7 +1,7 @@
 
 /* eslint-disable prefer-template, max-len */
 
-export default (vo) => `
+export default vo => `
 
 <!DOCTYPE html>
 <html lang="en">
