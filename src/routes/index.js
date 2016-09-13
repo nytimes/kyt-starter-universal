@@ -11,13 +11,13 @@ import App from '../components/App';
 const importHome = (nextState, cb) => {
   System.import('../components/Home')
     .then(module => cb(null, module.default))
-    .catch(e => { throw e; });
+    .catch((e) => { throw e; });
 };
 
 const importTools = (nextState, cb) => {
   System.import('../components/Tools')
     .then(module => cb(null, module.default))
-    .catch(e => { throw e; });
+    .catch((e) => { throw e; });
 };
 
 // We use `getComponent` to dynamically load routes.
