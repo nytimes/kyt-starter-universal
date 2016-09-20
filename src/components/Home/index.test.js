@@ -1,10 +1,10 @@
 
-import ava from 'ava';
+
 import React from 'react';
 import { shallow } from 'enzyme';
 import Home from './';
 
-ava('Test example', (test) => {
+it('Test example', () => {
   const wrapper = shallow(<Home />);
-  test.true(wrapper.is('section'));
+  expect(wrapper.is('section')).toBeTruthy();
 });
