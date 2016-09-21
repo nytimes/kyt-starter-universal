@@ -9,8 +9,8 @@ import ReactDom from 'react-dom';
 import Home from './src/components/Home';
 
 // Attach the component to the root.
-const rootEl = document.getElementById('root');
+const rootEl = document.getElementById('root'); // eslint-disable-line
 ReactDom.render(
-  <Home/>,
+  <Home />,
   rootEl
 );
