@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Root from './Root';
 
-const root = document.querySelector('#root');
+const root = document.querySelector('#root'); // eslint-disable-line
 
 const mount = (RootComponent) => {
   render(
