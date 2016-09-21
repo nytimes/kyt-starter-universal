@@ -10,6 +10,7 @@ export default vo => `
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta charSet='utf-8' />
     <meta httpEquiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link id="favicon" rel="shortcut icon" href="/kyt-favicon.png" sizes="16x16 32x32" type="image/pop()ng" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
