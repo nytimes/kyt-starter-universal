@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,6 +15,9 @@
     "url": "https://github.com/nytm/wf-kyt-starter-universal/issues"
   },
   "homepage": "https://github.com/nytm/wf-kyt-starter-universal#readme",
+  "kyt": {
+    "version": "0.2.0"
+  },
   "dependencies": {
     "compression": "^1.6.2",
     "enzyme": "^2.4.1",
