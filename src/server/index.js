@@ -10,7 +10,7 @@ import match from 'react-router/lib/match';
 import template from './template';
 import routes from '../routes';
 
-const clientAssets = require(process.env.ASSETS_MANIFEST);
+const clientAssets = require(KYT.ASSETS_MANIFEST);
 const app = express();
 
 // Remove annoying Express header addition.
@@ -20,7 +20,7 @@ app.disable('x-powered-by');
 app.use(compression());
 
 // Setup the public directory so that we can server static assets.
-app.use(express.static(path.join(process.cwd(), process.env.PUBLIC_DIR)));
+app.use(express.static(path.join(process.cwd(), KYT.PUBLIC_DIR)));
 
 // Setup server side routing.
 app.get('*', (request, response) => {
@@ -45,4 +45,4 @@ app.get('*', (request, response) => {
   });
 });
 
-app.listen(parseInt(process.env.SERVER_PORT, 10));
+app.listen(parseInt(KYT.SERVER_PORT, 10));
