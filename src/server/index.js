@@ -10,6 +10,7 @@ import match from 'react-router/lib/match';
 import template from './template';
 import routes from '../routes';
 
+// eslint-disable-next-line import/no-dynamic-require
 const clientAssets = require(KYT.ASSETS_MANIFEST);
 const app = express();
 
