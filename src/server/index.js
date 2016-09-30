@@ -10,7 +10,7 @@ import match from 'react-router/lib/match';
 import template from './template';
 import routes from '../routes';
 
-const clientAssets = require(KYT.ASSETS_MANIFEST);
+const clientAssets = require(KYT.ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require
 const app = express();
 
 // Remove annoying Express header addition.
