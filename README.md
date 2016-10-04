@@ -24,6 +24,6 @@ The following are some of the tools included in this starter-kyt:
 
 ## How To Contribute
 Want to build your own starter-kyt?
-See directions [here](https://github.com/NYTimes/kyt/docs/Starterkyts.md).
+See directions [here](https://github.com/NYTimes/kyt/blob/master/docs/Starterkyts.md).
 
 ## Changelog
