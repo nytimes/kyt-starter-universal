@@ -1,4 +1,7 @@
-# Universal React starter-kyt
+# Deprecated: This starter-kyt has been moved into the kyt monorepo. [New Location](https://github.com/NYTimes/kyt/tree/master/packages/kyt-starter-universal) 
+
+
+## Universal React starter-kyt
 
 This starter-kyt should serve as the base for an advanced, server and client-rendered React app.
 
